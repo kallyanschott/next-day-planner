@@ -22,7 +22,7 @@ export default class App extends Component {
       this.setState({tasks: result})
     );
 
-    tasks.insert({name: 'Task 2', desc: 'Buy bread.', date: new Date(), completed: true});
+    //tasks.insert({name: 'Task 2', desc: 'Buy bread.', date: new Date(), completed: true});
     // let today = new Date();
     // tasks.update({id: 2, name: 'Task 2', desc: 'Buy eggs.', date: new Date(today.getFullYear(), today.getMonth(), today.getDate()-7), completed: false});
     //tasks.delete(1);
