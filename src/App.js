@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import TasksDao from './database/TasksDAO';
+import Navbar from './bars/Navbar';
+import Footer from './bars/Footer';
+import Navigation from './navigation/Navigation';
 
 export default class App extends Component {
 
@@ -16,13 +19,13 @@ export default class App extends Component {
   
 
   componentDidMount() {
-    let tasks = TasksDao.getInstance();
+    // let tasks = TasksDao.getInstance();
 
-    tasks.getAll().then( result =>
-      this.setState({tasks: result})
-    );
+    // tasks.getAll().then( result =>
+    //   this.setState({tasks: result})
+    // );
 
-    //tasks.insert({name: 'Task 2', desc: 'Buy bread.', date: new Date(), completed: true});
+    // tasks.insert({name: 'Task 5', desc: 'Buy soda.', date: new Date(2021,10,16), completed: false});
     // let today = new Date();
     // tasks.update({id: 2, name: 'Task 2', desc: 'Buy eggs.', date: new Date(today.getFullYear(), today.getMonth(), today.getDate()-7), completed: false});
     //tasks.delete(1);
@@ -43,11 +46,9 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="App">
-      <header className="App-header">
-        <h1>Bem vindo!</h1>
-      </header>
-    </div>
+      <div className="container-fluid">
+        <Navigation/>       
+      </div>
     )
   }
 }
