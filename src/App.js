@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import TasksDao from './database/TasksDAO';
-import Navbar from './bars/Navbar';
-import Footer from './bars/Footer';
 import Navigation from './navigation/Navigation';
+import { BrowserRouter } from 'react-router-dom';
+import { Route, Switch } from 'react-router';
+import TodaysTasks from './tasks/TodaysTasks';
+import TomorrowsTasks from './tasks/TomorrowsTasks';
+import About from './about/About';
 
 export default class App extends Component {
 
@@ -25,7 +28,7 @@ export default class App extends Component {
     //   this.setState({tasks: result})
     // );
 
-    // tasks.insert({name: 'Task 5', desc: 'Buy soda.', date: new Date(2021,10,16), completed: false});
+    // tasks.insert({name: 'Task 5', desc: 'Buy soda.', date: new Date(2021, 9, 16), completed: true});
     // let today = new Date();
     // tasks.update({id: 2, name: 'Task 2', desc: 'Buy eggs.', date: new Date(today.getFullYear(), today.getMonth(), today.getDate()-7), completed: false});
     //tasks.delete(1);
@@ -46,9 +49,22 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="container-fluid">
-        <Navigation/>       
-      </div>
+      <BrowserRouter>
+        <div className="container-fluid">
+          <Navigation />       
+          <Switch>
+            <Route exact path="/">
+              <TodaysTasks />
+            </Route>
+            <Route exact path="/tomorrow">
+              <TomorrowsTasks />
+            </Route>
+            <Route exact path="/about">
+              <About />
+            </Route>
+          </Switch>
+        </div>
+      </BrowserRouter>
     )
   }
 }
