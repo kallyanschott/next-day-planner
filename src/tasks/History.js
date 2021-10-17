@@ -118,7 +118,7 @@ export default class History extends Component {
                                         <td>
                                             <div className="d-flex flex-column flex-lg-row gap-2">
                                                 <Tippy content="Move to today">
-                                                    <button className="btn btn-secondary btn-sm" type="button" onClick={() => this.moveTaskToToday(task)}><i className="bi bi-arrow-return-left"></i></button>
+                                                    <button className="btn btn-secondary btn-sm" type="button" onClick={() => this.moveTaskToToday(task)}><i className="bi bi-arrow-down"></i></button>
                                                 </Tippy>
                                                 <Tippy content="Move to tomorrow">
                                                     <button className="btn btn-secondary btn-sm" type="button" onClick={() => this.moveTaskToTomorrow(task)}><i className="bi bi-arrow-return-right"></i></button>

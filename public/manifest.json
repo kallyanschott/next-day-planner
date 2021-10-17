@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Simple Next Day Planner",
+  "name": "Do it today or leave it for tomorrow.",
   "icons": [
     {
       "src": "favicon.ico",

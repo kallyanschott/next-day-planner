@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import About from '../about/About'
-import TodaysTasks from '../tasks/TodaysTasks'
-import TomorrowsTasks from '../tasks/TomorrowsTasks'
 
 export default class Navigation extends Component {
 
