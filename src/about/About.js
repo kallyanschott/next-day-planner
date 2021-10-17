@@ -21,8 +21,10 @@ export default class About extends Component {
 
     render() {
         return (
-            <div>
-                About Next Day Planner.
+            <div className="row d-flex justify-content-center mt-5 pt-sm-4">
+                <div className="my-2 col-md-10 p-2">
+                    About Next Day Planner.
+                </div>
             </div>
         )
     }

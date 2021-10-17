@@ -100,7 +100,7 @@ export default class TomorrowsTasks extends Component {
 
     render() {
         return (
-            <div className="row d-flex justify-content-center">
+            <div className="row d-flex justify-content-center mt-5 pt-sm-4">
                 <div className="my-2 col-md-10 p-2">
                     <div className="d-flex gap-2">
                         <div className="col-1">
@@ -108,11 +108,12 @@ export default class TomorrowsTasks extends Component {
                                 <button type="button" className="btn btn-secondary" onClick={() => this.setState({insertingTask: true, newTaskName: "", newTaskDesc: "", validTask: true})} data-bs-toggle="modal" data-bs-target="#newTaskModal"><i className="bi bi-plus-lg"></i></button>
                             </Tippy>
                         </div>
-                        <div className="d-flex col-11 justify-content-center">
-                            <div className="col-md-4 col-sm-6 me-sm-5 pe-sm-5">
-                                <input className="form-control me-2 bg-dark text-white" type="text" placeholder="Search" aria-label="Search" onChange={this.searchChange}/>
+                        <div className="d-flex col-10 justify-content-center">
+                            <div className="col-md-4 col-sm-6">
+                                <input className="form-control bg-dark text-white" type="text" placeholder="Search" aria-label="Search" onChange={this.searchChange}/>
                             </div>
                         </div>
+                        <div className="col-1"></div>
                     </div>
                     <hr />
                     <div className="modal fade" id="newTaskModal" tabIndex="-1" aria-labelledby="newTaskModalLabel" aria-hidden="true">
@@ -147,7 +148,7 @@ export default class TomorrowsTasks extends Component {
                     </div>
                     <div className="row">
                         {this.state.tomorrowsTasks && this.state.tomorrowsTasks.map( (task) => {
-                            if((task.name.toLowerCase().search(this.state.search) !== -1) || (task.desc.toLowerCase().search(this.state.search) !== -1)) {
+                            if((task.name.toLowerCase().search(this.state.search.toLowerCase()) !== -1) || (task.desc.toLowerCase().search(this.state.search.toLowerCase()) !== -1)) {
                                 return <div key={task.id} className="col-md-4 col-sm-6 my-2">
                                     <div className="card text-white bg-dark border-secondary">
                                         <div className="card-body">
@@ -155,28 +156,28 @@ export default class TomorrowsTasks extends Component {
                                             <p className="card-text">{task.desc}</p>
                                             <div className="d-flex">
                                                 <div className="col">
-                                                        {task.completed ? 
+                                                    {task.completed ? 
                                                         <Tippy content="Mark as not done">
-                                                            <button className="btn btn-success" onClick={() => {task.completed = false; this.toggleTaskCompletion(task);}}><i className="bi bi-check-lg"></i></button>
+                                                            <button className="btn btn-success btn-sm" onClick={() => {task.completed = false; this.toggleTaskCompletion(task);}}><i className="bi bi-check-lg"></i></button>
                                                         </Tippy>
                                                         : <Tippy content="Mark as done">
-                                                            <button className="btn btn-outline-success" onClick={ () => {task.completed = true; this.toggleTaskCompletion(task);}}><i className="bi bi-check-lg" style={{opacity: 0}}></i></button>
+                                                            <button className="btn btn-outline-success btn-sm" onClick={ () => {task.completed = true; this.toggleTaskCompletion(task);}}><i className="bi bi-check-lg" style={{opacity: 0}}></i></button>
                                                         </Tippy>
                                                     }
                                                 </div>
                                                 <div className="d-flex flex-row gap-2 justify-content-end">
                                                     <Tippy content="Edit task">
-                                                        <button className="btn btn-secondary" type="button" onClick={() => {
+                                                        <button className="btn btn-secondary btn-sm" type="button" onClick={() => {
                                                                 this.setState({taskToUpdate: task, newTaskName: task.name, newTaskDesc: task.desc, insertingTask: false});
                                                             }} data-bs-toggle="modal" data-bs-target="#newTaskModal">
                                                             <i className="bi bi-pencil-square"></i>
                                                         </button>
                                                     </Tippy>
                                                     <Tippy content="Do it today">
-                                                        <button className="btn btn-secondary" type="button" onClick={() => this.moveTaskToToday(task)}><i className="bi bi-arrow-return-left"></i></button>
+                                                        <button className="btn btn-secondary btn-sm" type="button" onClick={() => this.moveTaskToToday(task)}><i className="bi bi-arrow-return-left"></i></button>
                                                     </Tippy>
                                                     <Tippy content="Delete task">
-                                                        <button className="btn btn-danger" type="button" onClick={() => this.deleteTask(task.id)}><i className="bi bi-trash"></i></button>
+                                                        <button className="btn btn-danger btn-sm" type="button" onClick={() => this.deleteTask(task.id)}><i className="bi bi-trash"></i></button>
                                                     </Tippy>
                                                 </div> 
                                             </div>   

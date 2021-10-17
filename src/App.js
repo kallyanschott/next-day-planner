@@ -6,6 +6,7 @@ import { Route, Switch } from 'react-router';
 import TodaysTasks from './tasks/TodaysTasks';
 import TomorrowsTasks from './tasks/TomorrowsTasks';
 import About from './about/About';
+import History from './tasks/History'
 
 export default class App extends Component {
 
@@ -28,7 +29,7 @@ export default class App extends Component {
     //   this.setState({tasks: result})
     // );
 
-    // tasks.insert({name: 'Task 5', desc: 'Buy soda.', date: new Date(2021, 9, 16), completed: true});
+    // tasks.insert({name: 'asdsadasdadasasdasasd', desc: 'fafafafafa aad afasdfsdadadad ad fdads', date: new Date(2021, 9, 13), completed: false});
     // let today = new Date();
     // tasks.update({id: 2, name: 'Task 2', desc: 'Buy eggs.', date: new Date(today.getFullYear(), today.getMonth(), today.getDate()-7), completed: false});
     //tasks.delete(1);
@@ -58,6 +59,9 @@ export default class App extends Component {
             </Route>
             <Route exact path="/tomorrow">
               <TomorrowsTasks />
+            </Route>
+            <Route exact path="/history">
+              <History />
             </Route>
             <Route exact path="/about">
               <About />

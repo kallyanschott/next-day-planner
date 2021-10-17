@@ -36,6 +36,12 @@ export default class TasksDao {
         return db.tasks.where('date').between(startTomorrow, endTomorrow, true, true).toArray();
     }
 
+    getOldTasks() {
+        let today = new Date();
+        let startToday = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+        return db.tasks.where('date').below(startToday).reverse().toArray();
+    }
+
     deleteOldTasks() {
         let today = new Date();
         let oneWeekAgo = new Date(today.getFullYear(), today.getMonth(), today.getDate()-7, 23, 59, 59, 999);
