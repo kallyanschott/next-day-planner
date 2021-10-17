@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default class Navigation extends Component {
 
-    hideNavbar = () => {
+    hideNavbar = (page) => {
         if(document.getElementById("navbarSupportedContent").classList.contains("show"))
             document.getElementById("navbarTogglerButton").click();
     }

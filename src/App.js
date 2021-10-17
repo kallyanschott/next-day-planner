@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Navigation from './navigation/Navigation';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { Route, Switch } from 'react-router';
 import TodaysTasks from './tasks/TodaysTasks';
 import TomorrowsTasks from './tasks/TomorrowsTasks';
@@ -11,7 +11,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <BrowserRouter>
+      <HashRouter>
         <div className="container-fluid">
           <Navigation />       
           <Switch>
@@ -29,7 +29,7 @@ export default class App extends Component {
             </Route>
           </Switch>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     )
   }
 }

@@ -102,6 +102,8 @@ export default class TomorrowsTasks extends Component {
         return (
             <div className="row d-flex justify-content-center mt-5 pt-sm-4">
                 <div className="my-2 col-md-10 p-2">
+                    <h3 className="d-sm-none text-center">Tomorrow's tasks</h3>
+                    <hr className="d-sm-none"/>
                     <div className="d-flex gap-2">
                         <div className="col-1">
                             <Tippy content="Add new task">

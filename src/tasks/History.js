@@ -78,6 +78,8 @@ export default class History extends Component {
         return (
             <div className="row d-flex justify-content-center mt-5 pt-sm-4">
                 <div className="my-2 col-md-10 p-2">
+                    <h3 className="d-sm-none text-center">History</h3>
+                    <hr className="d-sm-none"/>
                     <div className="d-flex gap-2">
                         <div className="col-1"></div>
                         <div className="d-flex col-10 justify-content-center">
