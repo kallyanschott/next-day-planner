@@ -26,15 +26,15 @@ export default class About extends Component {
                     <h1 id='simple-next-day-planner'>Simple Next Day Planner</h1>
                     <p>Create and manage your daily tasks in a simple way.</p>
                     <h2 id='quick-overview'>Quick Overview</h2>
-                    <p>There&#39;s two main to do lists: Today and Tomorrow.</p>
+                    <p>There are two main to-do lists: Today and Tomorrow.</p>
                     <p>In each one you can create, edit and delete your tasks.</p>
                     <p>When the day changes, your tasks that were previously in the Tomorrow list, will be transferred to Today&#39;s list, leaving Tomorrow&#39;s list empty.</p>
                     <p>You can also shift one task from today to tomorrow and vice-versa.</p>
-                    <p>Missed one task? No problem. In the History you can view your past tasks and if necessary transfer them to Today&#39;s or Tomorrow&#39;s list.</p>
+                    <p>Missed one task? No problem. In the History tab you can view your past tasks and if necessary transfer them to Today&#39;s or Tomorrow&#39;s list.</p>
                     <h2 id='about-this-project'>About This Project</h2>
-                    <p>This projected was created with the objective of learning and improving my skills with the technologies listed in the Credits section, mainly React and Dexie.js.</p>
-                    <p>After learning the basics of IndexedDB, Dexie.js proved to be a good and easy way to better make of the IndexedDB.</p>
-                    <p>Also in mind was the idea of creating a simple product I&#39;d like to use during everyday life.</p>
+                    <p>This project was created with the objective of learning and improving my skills with the listed technologies in the Credits section, mainly React and Dexie.js.</p>
+                    <p>After learning the basics of IndexedDB, Dexie.js proved to be a good and easy way to make better use of the IndexedDB.</p>
+                    <p>To create a simple prduct I'd like to use during everyday life, was also the idea in mind.</p>
                     <h2 id='credits'>Credits</h2>
                     <p>Simple Next Day Planner is created using:</p>
                     <ul>

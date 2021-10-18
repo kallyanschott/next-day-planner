@@ -4,7 +4,7 @@ Create and manage your daily tasks in a simple way.
 
 ## Quick Overview
 
-There's two main to do lists: Today and Tomorrow.
+There are two main to-do lists: Today and Tomorrow.
 
 In each one you can create, edit and delete your tasks.
 
@@ -12,7 +12,7 @@ When the day changes, your tasks that were previously in the Tomorrow list, will
 
 You can also shift one task from today to tomorrow and vice-versa.
 
-Missed one task? No problem. In the History you can view your past tasks and if necessary transfer them to Today's or Tomorrow's list.
+Missed one task? No problem. In the History tab you can view your past tasks and if necessary transfer them to Today's or Tomorrow's list.
 
 ## Credits
 
