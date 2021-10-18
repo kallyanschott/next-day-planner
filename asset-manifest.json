@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/next-day-planner/static/css/main.cd2134e0.chunk.css",
-    "main.js": "/next-day-planner/static/js/main.cd923433.chunk.js",
-    "main.js.map": "/next-day-planner/static/js/main.cd923433.chunk.js.map",
+    "main.js": "/next-day-planner/static/js/main.5ad30a3c.chunk.js",
+    "main.js.map": "/next-day-planner/static/js/main.5ad30a3c.chunk.js.map",
     "runtime-main.js": "/next-day-planner/static/js/runtime-main.d3d1feb1.js",
     "runtime-main.js.map": "/next-day-planner/static/js/runtime-main.d3d1feb1.js.map",
     "static/css/2.2c2c17a8.chunk.css": "/next-day-planner/static/css/2.2c2c17a8.chunk.css",
@@ -18,6 +18,6 @@
     "static/css/2.2c2c17a8.chunk.css",
     "static/js/2.d5b53c3a.chunk.js",
     "static/css/main.cd2134e0.chunk.css",
-    "static/js/main.cd923433.chunk.js"
+    "static/js/main.5ad30a3c.chunk.js"
   ]
 }
